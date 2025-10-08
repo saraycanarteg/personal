@@ -1,0 +1,147 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/fondomiffy.jpg");
+            background-size: 92%;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        body {
+            font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+            background-color: #F7E4ED;
+            color: #664854;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .perfil {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            background-color: #b0d1da;
+            border: 3px solid #B5C193;
+            border-radius: 15px;
+            padding: 30px;
+            opacity: 0.9;
+        }
+
+        .perfil-info h1 {
+            font-size: 48px;
+            color: #8E004E;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .contacto {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background-color: #FDDDE2;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .grid-contenido {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .seccion {
+            background-color: #b0d1da;
+            border: 3px solid #B5C193;
+            border-radius: 15px;
+            padding: 25px;
+            opacity: 0.9;
+        }
+
+        .seccion h3 {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #FDDDE2;
+            color: #8E004E;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .pasatiempos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .pasatiempo-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: rgba(253, 221, 226, 0.5);
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .pasatiempo-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #8E004E;
+        }
+
+        .pasatiempo-item span {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .educacion-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .educacion-item {
+            background-color: rgba(253, 221, 226, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .educacion-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #8E004E;
+            flex-shrink: 0;
+        }
+
+        .educacion-contenido h4 {
+            color: #8E004E;
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
