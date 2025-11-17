@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote History</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="../styles/styleHistory.css">
+</head>
+
+<body>
+  <div class="history-container">
+    <div class="page-header">
+      <h2>
+        <i data-lucide="history"></i>
+        Quote History
+      </h2>
+      <p class="page-subtitle">View and manage all your quote requests</p>
+    </div>
+
+    <div class="stats-cards">
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="file-text"></i>
+          Total Quotes
+        </div>
+        <div class="stat-value">2</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="clock"></i>
+          Pending
+        </div>
+        <div class="stat-value">1</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="check-circle"></i>
+          Approved
+        </div>
+        <div class="stat-value">1</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">
+          <i data-lucide="dollar-sign"></i>
+          Total Estimated
+        </div>
+        <div class="stat-value">$644.00</div>
+      </div>
+    </div>
+
+    <!-- Quotes List -->
+    <div class="quotes-list" id="quotesList">
+
+      <!-- Quote 1 - Approved -->
+      <div class="quote-card">
+        <div class="quote-header">
+          <div class="quote-title">
+            <div class="quote-id">Quote #QT-2024-001</div>
+            <div class="quote-date">
+              <i data-lucide="calendar"></i>
+              Requested on October 15, 2024
+            </div>
+          </div>
+          <span class="status-badge status-approved">
+            <i data-lucide="check-circle"></i>
+            Approved
+          </span>
+        </div>
+
+        <div class="quote-details">
+          <div class="detail-item">
+            <div class="detail-label">
+              <i data-lucide="calendar"></i>
+              Event Date
+            </div>
+            <div class="detail-value">November 25, 2024</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">
+              <i data-lucide="map-pin"></i>
+              Location
+            </div>
+            <div class="detail-value">Grand Hotel Ballroom</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">
+              <i data-lucide="users"></i>
+              Guests
+            </div>
+            <div class="detail-value">50 people</div>
+          </div>
+        </div>
+
+        <div class="products-section">
+          <div class="products-header">
+            <i data-lucide="shopping-bag"></i>
+            Ordered Items
+          </div>
+          <div class="product-list">
+            <div class="product-item">
+              <div class="product-info">
+                <div class="product-name">Grilled Ribeye Steak</div>
+                <div class="product-quantity">Quantity: 50 plates</div>
+              </div>
+              <div class="product-price">$1,400.00</div>
+            </div>
+            <div class="product-item">
+              <div class="product-info">
+                <div class="product-name">Chocolate Lava Cake</div>
+                <div class="product-quantity">Quantity: 50 servings</div>
+              </div>
+              <div class="product-price">$600.00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-total">
+          <div class="total-label">Final Total</div>
+          <div class="total-amount">$2,000.00</div>
+        </div>
+
+        <div class="notes-section">
+          <div class="notes-header">
+            <i data-lucide="message-circle"></i>
+            Chef's Response
+          </div>
+          <div class="notes-content">
+            Your quote has been approved! We've applied a 10% discount for groups over 40 people. We'll contact you 3
+            days before the event to confirm final details. Looking forward to serving you!
+          </div>
+        </div>
+
+        <div class="quote-actions">
+          <button class="btn btn-primary" onclick="viewDetails(1)">
+            <i data-lucide="eye"></i>
+            View Full Details
+          </button>
+          <button class="btn btn-secondary" onclick="downloadPDF(1)">
+            <i data-lucide="download"></i>
+            Download PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Quote 2 - Pending -->
+      <div class="quote-card">
+        <div class="quote-header">
+          <div class="quote-title">
+            <div class="quote-id">Quote #QT-2024-002</div>
+            <div class="quote-date">
+              <i data-lucide="calendar"></i>
+              Requested on November 8, 2024
+            </div>
+          </div>
+          <span class="status-badge status-pending">
+            <i data-lucide="clock"></i>
+            Pending Review
+          </span>
+        </div>
+
+        <div class="quote-details">
+          <div class="detail-item">
+            <div class="detail-label">
+              <i data-lucide="calendar"></i>
+              Event Date
+            </div>
+            <div class="detail-value">December 15, 2024</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">
+              <i data-lucide="map-pin"></i>
+              Location
+            </div>
+            <div class="detail-value">Beach Club Resort</div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-label">
+              <i data-lucide="users"></i>
+              Guests
+            </div>
+            <div class="detail-value">20 people</div>
+          </div>
+        </div>
+
+        <div class="products-section">
+          <div class="products-header">
+            <i data-lucide="shopping-bag"></i>
+            Requested Items
+          </div>
+          <div class="product-list">
+            <div class="product-item">
+              <div class="product-info">
+                <div class="product-name">Cuba Libre</div>
+                <div class="product-quantity">Quantity: 20 servings</div>
+              </div>
+              <div class="product-price">$170.00</div>
+            </div>
+            <div class="product-item">
+              <div class="product-info">
+                <div class="product-name">Grilled Ribeye Steak</div>
+                <div class="product-quantity">Quantity: 15 plates</div>
+              </div>
+              <div class="product-price">$420.00</div>
+            </div>
+            <div class="product-item">
+              <div class="product-info">
+                <div class="product-name">Chocolate Lava Cake</div>
+                <div class="product-quantity">Quantity: 20 servings</div>
+              </div>
+              <div class="product-price">$240.00</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-total">
+          <div class="total-label">Estimated Total</div>
+          <div class="total-amount">$830.00</div>
+        </div>
+
+        <div class="notes-section">
+          <div class="notes-header">
+            <i data-lucide="info"></i>
+            Your Notes
+          </div>
+          <div class="notes-content">
+            We need vegetarian options for 3 guests. Also, please confirm if the cocktails can be made sugar-free for
+            diabetic guests.
+          </div>
+        </div>
+
+        <div class="quote-actions">
+          <button class="btn btn-primary" onclick="viewDetails(2)">
+            <i data-lucide="eye"></i>
+            View Full Details
+          </button>
+          <button class="btn btn-secondary" onclick="editQuote(2)">
+            <i data-lucide="edit"></i>
+            Edit Request
+          </button>
+          <button class="btn btn-secondary" onclick="cancelQuote(2)">
+            <i data-lucide="x-circle"></i>
+            Cancel
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="editModal" class="edit-modal">
+    <div class="edit-modal-content">
+      <div class="edit-modal-header">
+        <h3><i data-lucide="edit"></i> <span id="editModalTitle">Edit Quote</span></h3>
+        <span class="close" onclick="closeEditModal()">&times;</span>
+      </div>
+      <div class="edit-modal-body">
+        <form id="editForm">
+          <div class="edit-form-group">
+            <label for="editEventDate">Event Date *</label>
+            <input type="date" id="editEventDate" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="editLocation">Location *</label>
+            <input type="text" id="editLocation" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="editGuests">Number of Guests *</label>
+            <input type="number" id="editGuests" min="1" required>
+          </div>
+          <div class="edit-form-group">
+            <label for="editNotes">Additional Notes</label>
+            <textarea id="editNotes" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-save">
+            <i data-lucide="save"></i>
+            Save Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="../scripts/scriptHistory.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>
